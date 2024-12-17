@@ -1,0 +1,28 @@
+@use "../../../../styles/variables" as v;
+@use "../../../../styles/mixins" as m;
+
+.welcome-container {
+    [class^="col-"] {
+        @include m.flexbox(column, center, center);
+        padding: 2rem;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 2.4rem;
+        color: v.$color1;
+        align-self: flex-start;
+    }
+
+    p {
+        color: v.$color1;
+        align-self: flex-start;
+    }
+
+    ul {
+        align-self: flex-start;
+        li {
+            line-height: 40px;
+        }
+    }
+}

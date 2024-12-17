@@ -1,0 +1,25 @@
+@use "../../../../styles/variables" as v;
+
+.contact-container {
+    .card {
+        position: relative;
+        z-index: 1;
+        border: 0;
+        box-shadow: 0 0 25px v.$color2;
+
+        .card-body {
+            padding: 4rem;
+        }
+    }
+
+    h2 {
+        color: v.$color2;
+        font-size: 1.6rem;
+    }
+
+    iframe {
+        transform: translateY(-100px);
+        margin-bottom: -107px;
+        z-index: -1;
+    }
+}

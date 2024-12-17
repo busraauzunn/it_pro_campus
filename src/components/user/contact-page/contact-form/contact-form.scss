@@ -1,0 +1,25 @@
+@use "../../../../styles/variables" as v;
+
+.contact-form-container {
+    h2 {
+        margin-bottom: 4rem;
+    }
+
+    input,
+    textarea {
+        border: 0;
+        border-bottom: 1px solid v.$color2-opacity-40;
+        resize: none;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: v.$color2-opacity-40;
+    }
+
+    .input-group-text {
+        border: 0;
+        background: none;
+        color: v.$color2-opacity-40;
+    }
+}

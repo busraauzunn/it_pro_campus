@@ -1,0 +1,12 @@
+@use "../../../../styles/variables" as v;
+
+.featured-courses-container {
+    background-color: v.$color4;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        padding-top: 50px;
+        color: v.$color2;
+    }
+}

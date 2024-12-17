@@ -1,0 +1,128 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+$animationTime: 5.5s;
+
+.unauthorized-page-container {
+    color: v.$color2;
+    position: relative;
+    height: 100vh;
+    @include m.flexbox(column, center, center);
+    background: linear-gradient(to bottom right, v.$color4, v.$color3);
+    padding: 3rem;
+
+    .btn-back {
+        position: absolute;
+        top: 1%;
+        left: 1%;
+    }
+
+    .message {
+        @include m.flexbox(column, center, center, 1rem);
+        text-align: center;
+        h1 {
+            margin: 0;
+            margin-top: 2rem;
+        }
+        p {
+            margin: 0;
+        }
+    }
+
+    .lock {
+        border-radius: 5px;
+        width: 55px;
+        height: 45px;
+        background-color: v.$color2;
+        animation: dip $animationTime;
+        animation-iteration-count: infinite;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            border-left: 5px solid v.$color2;
+            height: 20px;
+            width: 33px;
+            left: calc(50% - 17px);
+        }
+
+        &::before {
+            top: -30px;
+            border: 5px solid v.$color2;
+            border-bottom-color: transparent;
+            border-radius: 15px 15px 0 0;
+            height: 40px;
+            animation: lock $animationTime, spin $animationTime;
+            animation-iteration-count: infinite;
+        }
+
+        &::after {
+            top: -10px;
+            border-right: 5px solid transparent;
+            animation: spin $animationTime;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    @keyframes lock {
+        0% {
+            top: -45px;
+        }
+        24% {
+            top: -45px;
+        }
+        36% {
+            top: -30px;
+        }
+        64% {
+            top: -30px;
+        }
+        76% {
+            top: -45px;
+        }
+        100% {
+            top: -45px;
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: scaleX(-1);
+            left: calc(50% - 46px);
+        }
+        24% {
+            transform: scaleX(1);
+            left: calc(50% - 17px);
+        }
+        76% {
+            transform: scaleX(1);
+            left: calc(50% - 17px);
+        }
+        100% {
+            transform: scaleX(-1);
+            left: calc(50% - 46px);
+        }
+    }
+
+    @keyframes dip {
+        0% {
+            transform: translateY(0px);
+        }
+        28% {
+            transform: translateY(0px);
+        }
+        34% {
+            transform: translateY(10px);
+        }
+        40% {
+            transform: translateY(10px);
+        }
+        46% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+}

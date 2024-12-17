@@ -1,0 +1,14 @@
+@use "../../../styles/mixins.scss" as m;
+
+.user-menu-container {
+    @include m.reset-list();
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+
+    button.btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}

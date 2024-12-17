@@ -1,0 +1,13 @@
+@use "../../../../styles/variables" as v;
+@use "../../../../styles/mixins" as m;
+
+.instructors-title-container {
+    background-color: v.$color1;
+    height: 100%;
+    @include m.flexbox(row, center, center);
+    padding: 2rem;
+
+    h2 {
+        font-size: 3rem;
+    }
+}

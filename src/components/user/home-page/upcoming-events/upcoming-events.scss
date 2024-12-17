@@ -1,0 +1,23 @@
+@use "../../../../styles/variables" as v;
+
+.upcoming-events-container {
+    h2 {
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        color: v.$color2;
+
+        .review-swiper-button-prev,
+        .review-swiper-button-next {
+            cursor: pointer;
+
+            &:hover {
+                color: v.$color1;
+            }
+        }
+    }
+
+    .swiper-slide {
+        height: auto !important;
+    }
+}

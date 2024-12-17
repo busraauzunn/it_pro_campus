@@ -1,0 +1,40 @@
+@use "../../../../styles/variables" as v;
+@use "../../../../styles/mixins" as m;
+
+.instructor-card-container {
+    height: 100% !important;
+    position: relative;
+    overflow: hidden;
+
+    .instructor-card__image-container {
+        overflow: hidden;
+
+        img {
+            transition: transform 0.5s;
+
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+
+        &:hover {
+            + .card-title {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    .card-title {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 0;
+        transform: translateY(120%);
+        transition: transform 0.5s;
+        color: v.$color2;
+        @include m.flexbox(column, center, center);
+        background-color: v.$color1-opacity-9;
+        pointer-events: none;
+    }
+}

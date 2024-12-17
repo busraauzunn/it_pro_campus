@@ -1,0 +1,22 @@
+@use "../../../../styles/variables" as v;
+
+.admin-navigation-container {
+    .row {
+        row-gap: 1rem;
+
+        .card {
+            text-align: center;
+            box-shadow: 0 0 5px v.$color1;
+            border: none;
+
+            .card-body {
+                color: v.$color1;
+
+                &:hover {
+                    background-color: v.$color4;
+                    color: v.$color2;
+                }
+            }
+        }
+    }
+}

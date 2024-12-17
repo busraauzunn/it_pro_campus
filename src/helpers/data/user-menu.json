@@ -1,0 +1,59 @@
+{
+    "admin": [
+        { "title": "Admin Management", "link": "/dashboard/admin-management" },
+        { "title": "Contacts", "link": "/dashboard/contact-messages" },
+        { "title": "Dean Management", "link": "/dashboard/dean-management" },
+        {
+            "title": "Lesson Management",
+            "link": "/dashboard/lesson-management"
+        },
+        {
+            "title": "Teacher Management",
+            "link": "/dashboard/teacher-management"
+        },
+        {
+            "title": "Student Management",
+            "link": "/dashboard/student-management"
+        },
+        {
+            "title": "ViceDean Management",
+            "link": "/dashboard/vice-dean-management"
+        }
+    ],
+    "manager": [
+        {
+            "title": "ViceDean Management",
+            "link": "/dashboard/vice-dean-management"
+        },
+        { "title": "Contacts", "link": "/dashboard/contact-messages" }
+    ],
+    "assistantmanager": [
+        {
+            "title": "Lesson Management",
+            "link": "/dashboard/lesson-management"
+        },
+        {
+            "title": "Teacher Management",
+            "link": "/dashboard/teacher-management"
+        },
+        {
+            "title": "Student Management",
+            "link": "/dashboard/student-management"
+        },
+        { "title": "Contacts", "link": "/dashboard/contact-messages" }
+    ],
+    "teacher": [
+        {
+            "title": "Student Info Management",
+            "link": "/dashboard/student-info-management"
+        },
+        { "title": "Meet Management", "link": "/dashboard/meet-management" }
+    ],
+    "student": [
+        { "title": "Choose Lesson", "link": "/dashboard/choose-lesson" },
+        {
+            "title": "Grades & Announcements",
+            "link": "/dashboard/grade-and-meeting-management"
+        }
+    ]
+}
